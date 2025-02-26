@@ -26,7 +26,7 @@ public class LedSubsystem extends SubsystemBase {
    * NOTE: JAVA: Color.green <br>
    * NOTE: ONLY USE FRC COLOR!!! <br>
    *
-   * @param pattern
+   * @param pattern the pattern (color) to set the LED to
    */
   public void setColor(LEDPattern pattern) {
     pattern.applyTo(m_LedBuffer);
