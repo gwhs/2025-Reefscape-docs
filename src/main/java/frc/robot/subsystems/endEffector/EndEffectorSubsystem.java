@@ -1,6 +1,7 @@
 package frc.robot.subsystems.endEffector;
 
 import dev.doglog.DogLog;
+import edu.wpi.first.hal.HALUtil;
 import edu.wpi.first.wpilibj.RobotBase;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
@@ -28,8 +29,8 @@ public class EndEffectorSubsystem extends SubsystemBase {
 
     coralTriggered = new Trigger(() -> endEffectorIO.isSensorTriggered());
 
-    SmartDashboard.putData("End Effector Command/End Effector Shoot", setVoltage(3));
-    SmartDashboard.putData("End Effector Command/End Effector Intake", setVoltage(-2));
+    SmartDashboard.putData("End Effector Command/End Effector Shoot", shoot());
+    SmartDashboard.putData("End Effector Command/End Effector Intake", intake());
     SmartDashboard.putData("End Effector Command/Stop End Effector", stopMotor());
   }
 
@@ -41,6 +42,18 @@ public class EndEffectorSubsystem extends SubsystemBase {
     return Commands.runOnce(() -> endEffectorIO.setVoltage(voltage));
   }
 
+  public Command shoot() {
+    return Commands.runOnce(() -> endEffectorIO.setVoltage(-12));
+  }
+
+  public Command intake() {
+    return Commands.runOnce(() -> endEffectorIO.setVoltage(6));
+  }
+
+  public Command holdCoral() {
+    return Commands.runOnce(() -> endEffectorIO.setVoltage(1));
+  }
+
   /**
    * @return stop the motor
    */
@@ -50,8 +63,12 @@ public class EndEffectorSubsystem extends SubsystemBase {
 
   @Override
   public void periodic() {
+    double startTime = HALUtil.getFPGATime();
+
     endEffectorIO.update();
     DogLog.log("EndEffector/Voltage", endEffectorIO.getVoltage());
     DogLog.log("EndEffector/Velocity", endEffectorIO.getVelocity());
+
+    DogLog.log("Loop Time/End Effector", (HALUtil.getFPGATime() - startTime) / 1000);
   }
 }
