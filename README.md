@@ -1,6 +1,6 @@
 ﻿# reefscape
 
 ## DO NOT BUILD DOCS IN THIS REPO!!!
-  - ignore this if this repo is the docs one
+  - ignore ^ if this repo is the docs one
 
 Once you are done with your changes, run `./gradlew spotlessApply` to format your code. Make sure to add the and commit the new formatted changes, and push it to your branch.
