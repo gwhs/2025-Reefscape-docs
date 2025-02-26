@@ -29,6 +29,7 @@ import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.DriverStation.Alliance;
 import edu.wpi.first.wpilibj.Notifier;
 import edu.wpi.first.wpilibj.RobotController;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
 import edu.wpi.first.wpilibj2.command.Subsystem;
@@ -69,8 +70,8 @@ public class CommandSwerveDrivetrain extends TunerSwerveDrivetrain implements Su
   CurrentLimitsConfigs m3_current_config = new CurrentLimitsConfigs();
   CurrentLimitsConfigs m4_current_config = new CurrentLimitsConfigs();
 
-  public PIDController PID_X = new PIDController(1.7, 0, 0);
-  public PIDController PID_Y = new PIDController(1.7, 0, 0);
+  public PIDController PID_X = new PIDController(1.5, 0.01, 0.1);
+  public PIDController PID_Y = new PIDController(1.5, 0.01, 0.1);
   public PIDController PID_Rotation = new PIDController(0.1, 0, 0);
   public Trigger IS_AT_TARGET_POSE =
       new Trigger(() -> PID_X.atSetpoint() && PID_Y.atSetpoint() && PID_Rotation.atSetpoint());
@@ -156,9 +157,10 @@ public class CommandSwerveDrivetrain extends TunerSwerveDrivetrain implements Su
   }
 
   /**
-   * @return run the command NOTE: this sets it to 35 DO NOT CHANGE THE VALUE!!!! NOTE: this only
-   *     exists so that a thing in the RobotContainer.java file works NOTE: don't use this in the
-   *     actual code there is a 99% chance this isn't the function you want
+   * @return run the command NOTE: this sets it to 35 DO NOT CHANGE THE VALUE!!!! <br>
+   *     NOTE: this only exists so that a thing in the RobotContainer.java file works <br>
+   *     NOTE: don't use this in the actual code there is a 99% chance this isn't the function you
+   *     want
    */
   public Command setDriveMotorCurrentLimit() {
 
@@ -234,11 +236,15 @@ public class CommandSwerveDrivetrain extends TunerSwerveDrivetrain implements Su
       DriverStation.reportError(
           "Failed to load PathPlanner config and configure AutoBuilder", ex.getStackTrace());
     }
+    SmartDashboard.putData("Align/PID controller X", PID_X);
+    SmartDashboard.putData("Align/PID controller Y", PID_Y);
+    SmartDashboard.putData("Align/PID controller Rotate", PID_Rotation);
   }
 
   /**
    * Returns a command that applies the specified control request to this swerve drivetrain.
    *
+   * @param requestSupplier Function returning the request to apply
    * @param requestSupplier Function returning the request to apply
    * @return Command to run
    */
