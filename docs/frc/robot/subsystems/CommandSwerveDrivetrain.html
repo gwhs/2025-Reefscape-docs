@@ -123,24 +123,27 @@ implements edu.wpi.first.wpilibj2.command.Subsystem</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>edu.wpi.first.wpilibj2.command.button.Trigger</code></div>
-<div class="col-second even-row-color"><code><a href="#IS_ALIGNING_TO_POSE" class="member-name-link">IS_ALIGNING_TO_POSE</a></code></div>
+<div class="col-first even-row-color"><code>edu.wpi.first.math.trajectory.TrapezoidProfile.Constraints</code></div>
+<div class="col-second even-row-color"><code><a href="#constraints" class="member-name-link">constraints</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>edu.wpi.first.wpilibj2.command.button.Trigger</code></div>
-<div class="col-second odd-row-color"><code><a href="#IS_AT_TARGET_POSE" class="member-name-link">IS_AT_TARGET_POSE</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#IS_ALIGNING_TO_POSE" class="member-name-link">IS_ALIGNING_TO_POSE</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>static final edu.wpi.first.units.measure.LinearVelocity</code></div>
-<div class="col-second even-row-color"><code><a href="#kSpeedAt12Volts" class="member-name-link">kSpeedAt12Volts</a></code></div>
+<div class="col-first even-row-color"><code>edu.wpi.first.wpilibj2.command.button.Trigger</code></div>
+<div class="col-second even-row-color"><code><a href="#IS_AT_TARGET_POSE" class="member-name-link">IS_AT_TARGET_POSE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>edu.wpi.first.math.controller.PIDController</code></div>
-<div class="col-second odd-row-color"><code><a href="#PID_Rotation" class="member-name-link">PID_Rotation</a></code></div>
+<div class="col-first odd-row-color"><code>static final edu.wpi.first.units.measure.LinearVelocity</code></div>
+<div class="col-second odd-row-color"><code><a href="#kSpeedAt12Volts" class="member-name-link">kSpeedAt12Volts</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>edu.wpi.first.math.controller.PIDController</code></div>
-<div class="col-second even-row-color"><code><a href="#PID_X" class="member-name-link">PID_X</a></code></div>
+<div class="col-second even-row-color"><code><a href="#PID_Rotation" class="member-name-link">PID_Rotation</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>edu.wpi.first.math.controller.PIDController</code></div>
-<div class="col-second odd-row-color"><code><a href="#PID_Y" class="member-name-link">PID_Y</a></code></div>
+<div class="col-first odd-row-color"><code>edu.wpi.first.math.controller.ProfiledPIDController</code></div>
+<div class="col-second odd-row-color"><code><a href="#PID_X" class="member-name-link">PID_X</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>edu.wpi.first.math.controller.ProfiledPIDController</code></div>
+<div class="col-second even-row-color"><code><a href="#PID_Y" class="member-name-link">PID_Y</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.ctre.phoenix6.swerve.SwerveDrivetrain">Fields inherited from class&nbsp;com.ctre.phoenix6.swerve.SwerveDrivetrain</h3>
@@ -250,15 +253,21 @@ implements edu.wpi.first.wpilibj2.command.Subsystem</span></div>
 </section>
 </li>
 <li>
+<section class="detail" id="constraints">
+<h3>constraints</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.trajectory.TrapezoidProfile.Constraints</span>&nbsp;<span class="element-name">constraints</span></div>
+</section>
+</li>
+<li>
 <section class="detail" id="PID_X">
 <h3>PID_X</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.controller.PIDController</span>&nbsp;<span class="element-name">PID_X</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.controller.ProfiledPIDController</span>&nbsp;<span class="element-name">PID_X</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="PID_Y">
 <h3>PID_Y</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.controller.PIDController</span>&nbsp;<span class="element-name">PID_Y</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.controller.ProfiledPIDController</span>&nbsp;<span class="element-name">PID_Y</span></div>
 </section>
 </li>
 <li>
@@ -377,9 +386,10 @@ implements edu.wpi.first.wpilibj2.command.Subsystem</span></div>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">setDriveMotorCurrentLimit</span>()</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>run the command NOTE: this sets it to 35 DO NOT CHANGE THE VALUE!!!! NOTE: this only
-     exists so that a thing in the RobotContainer.java file works NOTE: don't use this in the
-     actual code there is a 99% chance this isn't the function you want</dd>
+<dd>run the command NOTE: this sets it to 35 DO NOT CHANGE THE VALUE!!!! <br>
+     NOTE: this only exists so that a thing in the RobotContainer.java file works <br>
+     NOTE: don't use this in the actual code there is a 99% chance this isn't the function you
+     want</dd>
 </dl>
 </section>
 </li>
@@ -390,6 +400,7 @@ implements edu.wpi.first.wpilibj2.command.Subsystem</span></div>
 <div class="block">Returns a command that applies the specified control request to this swerve drivetrain.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
+<dd><code>requestSupplier</code> - Function returning the request to apply</dd>
 <dd><code>requestSupplier</code> - Function returning the request to apply</dd>
 <dt>Returns:</dt>
 <dd>Command to run</dd>
