@@ -124,17 +124,23 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHeightMeters()" class="member-name-link">getHeightMeters</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#decreaseHeight(double)" class="member-name-link">decreaseHeight</a><wbr>(double&nbsp;meters)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#homingCommand()" class="member-name-link">homingCommand</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHeightMeters()" class="member-name-link">getHeightMeters</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#homingCommand()" class="member-name-link">homingCommand</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">The idea is that we slowly lower the elevator (by applying negative volt) until the reverse
  limit switch is triggered then we stop the elevator the motor automatically sets the internal
  encoder to zero when the reverse limit switch is triggered (see ElevatorIOReal for this config
  flag)</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#increaseHeight(double)" class="member-name-link">increaseHeight</a><wbr>(double&nbsp;meters)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#metersToRotations(double)" class="member-name-link">metersToRotations</a><wbr>(double&nbsp;meters)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
@@ -268,7 +274,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setNeutralMode</span><wbr><span class="parameters">(com.ctre.phoenix6.signals.NeutralModeValue&nbsp;mode)</span></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>mode</code> - the mode to go to?s</dd>
+<dd><code>mode</code> - the mode to go to</dd>
 </dl>
 </section>
 </li>
@@ -282,6 +288,30 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="sysIdDynamic(edu.wpi.first.wpilibj2.command.sysid.SysIdRoutine.Direction)">
 <h3>sysIdDynamic</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">sysIdDynamic</span><wbr><span class="parameters">(edu.wpi.first.wpilibj2.command.sysid.SysIdRoutine.Direction&nbsp;direction)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="increaseHeight(double)">
+<h3>increaseHeight</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">increaseHeight</span><wbr><span class="parameters">(double&nbsp;meters)</span></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>meters</code> - the amount of meters to add</dd>
+<dt>Returns:</dt>
+<dd>run the command</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="decreaseHeight(double)">
+<h3>decreaseHeight</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">decreaseHeight</span><wbr><span class="parameters">(double&nbsp;meters)</span></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>meters</code> - the amount of meters to remove</dd>
+<dt>Returns:</dt>
+<dd>run the command</dd>
+</dl>
 </section>
 </li>
 </ul>
