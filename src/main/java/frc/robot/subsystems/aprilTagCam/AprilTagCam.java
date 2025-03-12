@@ -157,7 +157,6 @@ public class AprilTagCam {
   /**
    * @param estimPose3d estimated Pose3d
    * @param optionalEstimPose optional estimated pose
-   * @param filteredTags tags to filter
    * @param speed how fast are the chassis'
    * @return are they filtered?
    */

@@ -60,14 +60,12 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="frc/robot/commands/AlignToPose.html" class="type-name-link" title="class in frc.robot.commands">AlignToPose</a> - Class in <a href="frc/robot/commands/package-summary.html">frc.robot.commands</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="frc/robot/commands/AlignToPose.html#%3Cinit%3E(java.util.function.Supplier,frc.robot.subsystems.CommandSwerveDrivetrain,java.util.function.DoubleSupplier)" class="member-name-link">AlignToPose(Supplier&lt;Pose2d&gt;, CommandSwerveDrivetrain, DoubleSupplier)</a> - Constructor for class frc.robot.commands.<a href="frc/robot/commands/AlignToPose.html" title="class in frc.robot.commands">AlignToPose</a></dt>
+<dt><a href="frc/robot/commands/AlignToPose.html#%3Cinit%3E(java.util.function.Supplier,frc.robot.subsystems.CommandSwerveDrivetrain,java.util.function.DoubleSupplier,edu.wpi.first.wpilibj2.command.button.CommandXboxController)" class="member-name-link">AlignToPose(Supplier&lt;Pose2d&gt;, CommandSwerveDrivetrain, DoubleSupplier, CommandXboxController)</a> - Constructor for class frc.robot.commands.<a href="frc/robot/commands/AlignToPose.html" title="class in frc.robot.commands">AlignToPose</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/CommandSwerveDrivetrain.html#applyRequest(java.util.function.Supplier)" class="member-name-link">applyRequest(Supplier&lt;SwerveRequest&gt;)</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CommandSwerveDrivetrain.html" title="class in frc.robot.subsystems">CommandSwerveDrivetrain</a></dt>
 <dd>
 <div class="block">Returns a command that applies the specified control request to this swerve drivetrain.</div>
 </dd>
-<dt><a href="frc/robot/subsystems/aprilTagCam/AprilTagCamConstants.html#APRILTAG_MAX_DISTANCE" class="member-name-link">APRILTAG_MAX_DISTANCE</a> - Static variable in class frc.robot.subsystems.aprilTagCam.<a href="frc/robot/subsystems/aprilTagCam/AprilTagCamConstants.html" title="class in frc.robot.subsystems.aprilTagCam">AprilTagCamConstants</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/aprilTagCam/AprilTagCam.html" class="type-name-link" title="class in frc.robot.subsystems.aprilTagCam">AprilTagCam</a> - Class in <a href="frc/robot/subsystems/aprilTagCam/package-summary.html">frc.robot.subsystems.aprilTagCam</a></dt>
 <dd>
 <div class="block">Add your docs here.</div>
@@ -341,9 +339,9 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/FieldConstants.html#%3Cinit%3E()" class="member-name-link">FieldConstants()</a> - Constructor for class frc.robot.<a href="frc/robot/FieldConstants.html" title="class in frc.robot">FieldConstants</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="frc/robot/subsystems/aprilTagCam/AprilTagCam.html#filterResults(edu.wpi.first.math.geometry.Pose3d,org.photonvision.EstimatedRobotPose,java.util.ArrayList,edu.wpi.first.math.kinematics.ChassisSpeeds)" class="member-name-link">filterResults(Pose3d, EstimatedRobotPose, ArrayList&lt;Pose3d&gt;, ChassisSpeeds)</a> - Method in class frc.robot.subsystems.aprilTagCam.<a href="frc/robot/subsystems/aprilTagCam/AprilTagCam.html" title="class in frc.robot.subsystems.aprilTagCam">AprilTagCam</a></dt>
+<dt><a href="frc/robot/subsystems/aprilTagCam/AprilTagCam.html#filterResults(edu.wpi.first.math.geometry.Pose3d,org.photonvision.EstimatedRobotPose,edu.wpi.first.math.kinematics.ChassisSpeeds)" class="member-name-link">filterResults(Pose3d, EstimatedRobotPose, ChassisSpeeds)</a> - Method in class frc.robot.subsystems.aprilTagCam.<a href="frc/robot/subsystems/aprilTagCam/AprilTagCam.html" title="class in frc.robot.subsystems.aprilTagCam">AprilTagCam</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="frc/robot/subsystems/aprilTagCam/AprilTagCam.html#filterTags(java.util.ArrayList,edu.wpi.first.math.geometry.Pose3d)" class="member-name-link">filterTags(ArrayList&lt;Pose3d&gt;, Pose3d)</a> - Method in class frc.robot.subsystems.aprilTagCam.<a href="frc/robot/subsystems/aprilTagCam/AprilTagCam.html" title="class in frc.robot.subsystems.aprilTagCam">AprilTagCam</a></dt>
+<dt><a href="frc/robot/EagleUtil.html#findClosestReefIndex(edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">findClosestReefIndex(Pose2d)</a> - Static method in class frc.robot.<a href="frc/robot/EagleUtil.html" title="class in frc.robot">EagleUtil</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/commands/autonomous/FiveCycle.html" class="type-name-link" title="class in frc.robot.commands.autonomous">FiveCycle</a> - Class in <a href="frc/robot/commands/autonomous/package-summary.html">frc.robot.commands.autonomous</a></dt>
 <dd>&nbsp;</dd>
@@ -441,6 +439,10 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/EagleUtil.html#getNonProcessorForAlliance()" class="member-name-link">getNonProcessorForAlliance()</a> - Static method in class frc.robot.<a href="frc/robot/EagleUtil.html" title="class in frc.robot">EagleUtil</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="frc/robot/EagleUtil.html#getOffsetArmAngle(frc.robot.RobotContainer.CoralLevel,edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">getOffsetArmAngle(RobotContainer.CoralLevel, Pose2d)</a> - Static method in class frc.robot.<a href="frc/robot/EagleUtil.html" title="class in frc.robot">EagleUtil</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/EagleUtil.html#getOffsetElevatorHeight(frc.robot.RobotContainer.CoralLevel,edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">getOffsetElevatorHeight(RobotContainer.CoralLevel, Pose2d)</a> - Static method in class frc.robot.<a href="frc/robot/EagleUtil.html" title="class in frc.robot">EagleUtil</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/CommandSwerveDrivetrain.html#getPose()" class="member-name-link">getPose()</a> - Method in class frc.robot.subsystems.<a href="frc/robot/subsystems/CommandSwerveDrivetrain.html" title="class in frc.robot.subsystems">CommandSwerveDrivetrain</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/arm/ArmIO.html#getPosition()" class="member-name-link">getPosition()</a> - Method in interface frc.robot.subsystems.arm.<a href="frc/robot/subsystems/arm/ArmIO.html" title="interface in frc.robot.subsystems.arm">ArmIO</a></dt>
@@ -512,6 +514,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/endEffector/EndEffectorSubsystem.html#intake()" class="member-name-link">intake()</a> - Method in class frc.robot.subsystems.endEffector.<a href="frc/robot/subsystems/endEffector/EndEffectorSubsystem.html" title="class in frc.robot.subsystems.endEffector">EndEffectorSubsystem</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsystems/endEffector/EndEffectorConstants.html#INTAKE_CORAL_CURRENT" class="member-name-link">INTAKE_CORAL_CURRENT</a> - Static variable in class frc.robot.subsystems.endEffector.<a href="frc/robot/subsystems/endEffector/EndEffectorConstants.html" title="class in frc.robot.subsystems.endEffector">EndEffectorConstants</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/elevator/ElevatorConstants.html#INTAKE_METER" class="member-name-link">INTAKE_METER</a> - Static variable in class frc.robot.subsystems.elevator.<a href="frc/robot/subsystems/elevator/ElevatorConstants.html" title="class in frc.robot.subsystems.elevator">ElevatorConstants</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/CommandSwerveDrivetrain.html#IS_ALIGNING_TO_POSE" class="member-name-link">IS_ALIGNING_TO_POSE</a> - Variable in class frc.robot.subsystems.<a href="frc/robot/subsystems/CommandSwerveDrivetrain.html" title="class in frc.robot.subsystems">CommandSwerveDrivetrain</a></dt>
@@ -537,6 +541,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/commands/AlignToPose.html#isFinished()" class="member-name-link">isFinished()</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/AlignToPose.html" title="class in frc.robot.commands">AlignToPose</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/commands/DriveCommand.html#isFinished()" class="member-name-link">isFinished()</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/DriveCommand.html" title="class in frc.robot.commands">DriveCommand</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/commands/AlignToPose.html#isJoystickActive()" class="member-name-link">isJoystickActive()</a> - Method in class frc.robot.commands.<a href="frc/robot/commands/AlignToPose.html" title="class in frc.robot.commands">AlignToPose</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/EagleUtil.html#isRedAlliance()" class="member-name-link">isRedAlliance()</a> - Static method in class frc.robot.<a href="frc/robot/EagleUtil.html" title="class in frc.robot">EagleUtil</a></dt>
 <dd>&nbsp;</dd>
@@ -621,6 +627,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/EagleUtil.html#m_redPoses" class="member-name-link">m_redPoses</a> - Static variable in class frc.robot.<a href="frc/robot/EagleUtil.html" title="class in frc.robot">EagleUtil</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsystems/arm/ArmConstants.html#MAGNET_OFFSET_DEGREES" class="member-name-link">MAGNET_OFFSET_DEGREES</a> - Static variable in class frc.robot.subsystems.arm.<a href="frc/robot/subsystems/arm/ArmConstants.html" title="class in frc.robot.subsystems.arm">ArmConstants</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/Main.html#main(java.lang.String...)" class="member-name-link">main(String...)</a> - Static method in class frc.robot.<a href="frc/robot/Main.html" title="class in frc.robot">Main</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/Main.html" class="type-name-link" title="class in frc.robot">Main</a> - Class in <a href="frc/robot/package-summary.html">frc.robot</a></dt>
@@ -648,6 +656,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/subsystems/elevator/ElevatorIO.html#metersToRotations" class="member-name-link">metersToRotations</a> - Static variable in interface frc.robot.subsystems.elevator.<a href="frc/robot/subsystems/elevator/ElevatorIO.html" title="interface in frc.robot.subsystems.elevator">ElevatorIO</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/elevator/ElevatorSubsystem.html#metersToRotations(double)" class="member-name-link">metersToRotations(double)</a> - Static method in class frc.robot.subsystems.elevator.<a href="frc/robot/subsystems/elevator/ElevatorSubsystem.html" title="class in frc.robot.subsystems.elevator">ElevatorSubsystem</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsystems/aprilTagCam/AprilTagCamConstants.html#MULTI_APRILTAG_MAX_DISTANCE" class="member-name-link">MULTI_APRILTAG_MAX_DISTANCE</a> - Static variable in class frc.robot.subsystems.aprilTagCam.<a href="frc/robot/subsystems/aprilTagCam/AprilTagCamConstants.html" title="class in frc.robot.subsystems.aprilTagCam">AprilTagCamConstants</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:N">N</h2>
@@ -692,6 +702,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/RobotContainer.html#prepScoreCoral(double,double)" class="member-name-link">prepScoreCoral(double, double)</a> - Method in class frc.robot.<a href="frc/robot/RobotContainer.html" title="class in frc.robot">RobotContainer</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/RobotContainer.html#prepScoreCoral(frc.robot.RobotContainer.CoralLevel)" class="member-name-link">prepScoreCoral(RobotContainer.CoralLevel)</a> - Method in class frc.robot.<a href="frc/robot/RobotContainer.html" title="class in frc.robot">RobotContainer</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/RobotContainer.html#prepScoreCoral(java.util.function.DoubleSupplier,java.util.function.DoubleSupplier)" class="member-name-link">prepScoreCoral(DoubleSupplier, DoubleSupplier)</a> - Method in class frc.robot.<a href="frc/robot/RobotContainer.html" title="class in frc.robot">RobotContainer</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/commands/DriveCommand.TargetMode.html#PROCESSOR" class="member-name-link">PROCESSOR</a> - Enum constant in enum class frc.robot.commands.<a href="frc/robot/commands/DriveCommand.TargetMode.html" title="enum class in frc.robot.commands">DriveCommand.TargetMode</a></dt>
 <dd>&nbsp;</dd>
@@ -767,6 +779,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">drives the arm until it reaches the given provided angle</div>
 </dd>
+<dt><a href="frc/robot/subsystems/arm/ArmSubsystem.html#setAngleSupplier(java.util.function.DoubleSupplier)" class="member-name-link">setAngleSupplier(DoubleSupplier)</a> - Method in class frc.robot.subsystems.arm.<a href="frc/robot/subsystems/arm/ArmSubsystem.html" title="class in frc.robot.subsystems.arm">ArmSubsystem</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/led/LedSubsystem.html#setColor(edu.wpi.first.wpilibj.LEDPattern)" class="member-name-link">setColor(LEDPattern)</a> - Method in class frc.robot.subsystems.led.<a href="frc/robot/subsystems/led/LedSubsystem.html" title="class in frc.robot.subsystems.led">LedSubsystem</a></dt>
 <dd>
 <div class="block">NOTE: probably only use LEDPattern.solid() <br>
@@ -783,6 +797,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Drives the elevator to the give elevation in meters</div>
 </dd>
+<dt><a href="frc/robot/subsystems/elevator/ElevatorSubsystem.html#setHeightSupplier(java.util.function.DoubleSupplier)" class="member-name-link">setHeightSupplier(DoubleSupplier)</a> - Method in class frc.robot.subsystems.elevator.<a href="frc/robot/subsystems/elevator/ElevatorSubsystem.html" title="class in frc.robot.subsystems.elevator">ElevatorSubsystem</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/elevator/ElevatorIO.html#setNeutralMode(com.ctre.phoenix6.signals.NeutralModeValue)" class="member-name-link">setNeutralMode(NeutralModeValue)</a> - Method in interface frc.robot.subsystems.elevator.<a href="frc/robot/subsystems/elevator/ElevatorIO.html" title="interface in frc.robot.subsystems.elevator">ElevatorIO</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/elevator/ElevatorIOReal.html#setNeutralMode(com.ctre.phoenix6.signals.NeutralModeValue)" class="member-name-link">setNeutralMode(NeutralModeValue)</a> - Method in class frc.robot.subsystems.elevator.<a href="frc/robot/subsystems/elevator/ElevatorIOReal.html" title="class in frc.robot.subsystems.elevator">ElevatorIOReal</a></dt>
@@ -836,6 +852,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="frc/robot/Robot.html#simulationInit()" class="member-name-link">simulationInit()</a> - Method in class frc.robot.<a href="frc/robot/Robot.html" title="class in frc.robot">Robot</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/Robot.html#simulationPeriodic()" class="member-name-link">simulationPeriodic()</a> - Method in class frc.robot.<a href="frc/robot/Robot.html" title="class in frc.robot">Robot</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="frc/robot/subsystems/aprilTagCam/AprilTagCamConstants.html#SINGLE_APRILTAG_MAX_DISTANCE" class="member-name-link">SINGLE_APRILTAG_MAX_DISTANCE</a> - Static variable in class frc.robot.subsystems.aprilTagCam.<a href="frc/robot/subsystems/aprilTagCam/AprilTagCamConstants.html" title="class in frc.robot.subsystems.aprilTagCam">AprilTagCamConstants</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="frc/robot/subsystems/elevator/ElevatorConstants.html#SPROCKET_DIAMETER" class="member-name-link">SPROCKET_DIAMETER</a> - Static variable in class frc.robot.subsystems.elevator.<a href="frc/robot/subsystems/elevator/ElevatorConstants.html" title="class in frc.robot.subsystems.elevator">ElevatorConstants</a></dt>
 <dd>&nbsp;</dd>

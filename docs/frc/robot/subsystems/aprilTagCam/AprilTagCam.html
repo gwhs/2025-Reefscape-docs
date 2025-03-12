@@ -110,21 +110,16 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#filterResults(edu.wpi.first.math.geometry.Pose3d,org.photonvision.EstimatedRobotPose,java.util.ArrayList,edu.wpi.first.math.kinematics.ChassisSpeeds)" class="member-name-link">filterResults</a><wbr>(edu.wpi.first.math.geometry.Pose3d&nbsp;estimPose3d,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#filterResults(edu.wpi.first.math.geometry.Pose3d,org.photonvision.EstimatedRobotPose,edu.wpi.first.math.kinematics.ChassisSpeeds)" class="member-name-link">filterResults</a><wbr>(edu.wpi.first.math.geometry.Pose3d&nbsp;estimPose3d,
  org.photonvision.EstimatedRobotPose&nbsp;optionalEstimPose,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose3d&gt;&nbsp;filteredTags,
  edu.wpi.first.math.kinematics.ChassisSpeeds&nbsp;speed)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose3d&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#filterTags(java.util.ArrayList,edu.wpi.first.math.geometry.Pose3d)" class="member-name-link">filterTags</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose3d&gt;&nbsp;unfilteredTags,
- edu.wpi.first.math.geometry.Pose3d&nbsp;robotPose)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double[]</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getSDArray(edu.wpi.first.math.Matrix)" class="member-name-link">getSDArray</a><wbr>(edu.wpi.first.math.Matrix&lt;edu.wpi.first.math.numbers.N3,<wbr>edu.wpi.first.math.numbers.N1&gt;&nbsp;sd)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updatePoseEstim()" class="member-name-link">updatePoseEstim</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double[]</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getSDArray(edu.wpi.first.math.Matrix)" class="member-name-link">getSDArray</a><wbr>(edu.wpi.first.math.Matrix&lt;edu.wpi.first.math.numbers.N3,<wbr>edu.wpi.first.math.numbers.N1&gt;&nbsp;sd)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updatePoseEstim()" class="member-name-link">updatePoseEstim</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">updates the pose estimations <br>
  NOTE: also updates the connection check for the camera</div>
 </div>
@@ -184,34 +179,18 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="filterResults(edu.wpi.first.math.geometry.Pose3d,org.photonvision.EstimatedRobotPose,java.util.ArrayList,edu.wpi.first.math.kinematics.ChassisSpeeds)">
+<section class="detail" id="filterResults(edu.wpi.first.math.geometry.Pose3d,org.photonvision.EstimatedRobotPose,edu.wpi.first.math.kinematics.ChassisSpeeds)">
 <h3>filterResults</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">filterResults</span><wbr><span class="parameters">(edu.wpi.first.math.geometry.Pose3d&nbsp;estimPose3d,
  org.photonvision.EstimatedRobotPose&nbsp;optionalEstimPose,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose3d&gt;&nbsp;filteredTags,
  edu.wpi.first.math.kinematics.ChassisSpeeds&nbsp;speed)</span></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>estimPose3d</code> - estimated Pose3d</dd>
 <dd><code>optionalEstimPose</code> - optional estimated pose</dd>
-<dd><code>filteredTags</code> - tags to filter</dd>
 <dd><code>speed</code> - how fast are the chassis'</dd>
 <dt>Returns:</dt>
 <dd>are they filtered?</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="filterTags(java.util.ArrayList,edu.wpi.first.math.geometry.Pose3d)">
-<h3>filterTags</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose3d&gt;</span>&nbsp;<span class="element-name">filterTags</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose3d&gt;&nbsp;unfilteredTags,
- edu.wpi.first.math.geometry.Pose3d&nbsp;robotPose)</span></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>unfilteredTags</code> - tags to filter</dd>
-<dd><code>robotPose</code> - the robot position</dd>
-<dt>Returns:</dt>
-<dd>the tags</dd>
 </dl>
 </section>
 </li>

@@ -110,10 +110,10 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color"><code>static edu.wpi.first.math.geometry.Pose2d</code></div>
 <div class="col-second odd-row-color"><code><a href="#blueCoralStationProcessorSide" class="member-name-link">blueCoralStationProcessorSide</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</code></div>
+<div class="col-first even-row-color"><code>protected static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#m_bluePoses" class="member-name-link">m_bluePoses</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</code></div>
+<div class="col-first odd-row-color"><code>protected static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</code></div>
 <div class="col-second odd-row-color"><code><a href="#m_redPoses" class="member-name-link">m_redPoses</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static edu.wpi.first.math.geometry.Pose2d</code></div>
@@ -165,28 +165,39 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.wpilibj2.command.Command</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#detriggerAlert(edu.wpi.first.wpilibj.Alert)" class="member-name-link">detriggerAlert</a><wbr>(edu.wpi.first.wpilibj.Alert&nbsp;alert)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.math.geometry.Pose2d</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getCachedReefPose(edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">getCachedReefPose</a><wbr>(edu.wpi.first.math.geometry.Pose2d&nbsp;pose)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#findClosestReefIndex(edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">findClosestReefIndex</a><wbr>(edu.wpi.first.math.geometry.Pose2d&nbsp;pose)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.math.geometry.Pose2d</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getClosetStationGen(edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">getClosetStationGen</a><wbr>(edu.wpi.first.math.geometry.Pose2d&nbsp;pose)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getCachedReefPose(edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">getCachedReefPose</a><wbr>(edu.wpi.first.math.geometry.Pose2d&nbsp;pose)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.math.geometry.Pose2d</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getClosetStationGen(edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">getClosetStationGen</a><wbr>(edu.wpi.first.math.geometry.Pose2d&nbsp;pose)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDistanceBetween(edu.wpi.first.math.geometry.Pose2d,edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">getDistanceBetween</a><wbr>(edu.wpi.first.math.geometry.Pose2d&nbsp;poseA,
+ edu.wpi.first.math.geometry.Pose2d&nbsp;poseB)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.math.geometry.Pose2d</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getNonProcessorForAlliance()" class="member-name-link">getNonProcessorForAlliance</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getOffsetArmAngle(frc.robot.RobotContainer.CoralLevel,edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">getOffsetArmAngle</a><wbr>(<a href="RobotContainer.CoralLevel.html" title="enum class in frc.robot">RobotContainer.CoralLevel</a>&nbsp;level,
+ edu.wpi.first.math.geometry.Pose2d&nbsp;robotPose)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDistanceBetween(edu.wpi.first.math.geometry.Pose2d,edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">getDistanceBetween</a><wbr>(edu.wpi.first.math.geometry.Pose2d&nbsp;poseA,
- edu.wpi.first.math.geometry.Pose2d&nbsp;poseB)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getOffsetElevatorHeight(frc.robot.RobotContainer.CoralLevel,edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">getOffsetElevatorHeight</a><wbr>(<a href="RobotContainer.CoralLevel.html" title="enum class in frc.robot">RobotContainer.CoralLevel</a>&nbsp;level,
+ edu.wpi.first.math.geometry.Pose2d&nbsp;robotPose)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.math.geometry.Pose2d</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getNonProcessorForAlliance()" class="member-name-link">getNonProcessorForAlliance</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getProcessorForAlliance()" class="member-name-link">getProcessorForAlliance</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.math.geometry.Pose2d</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getProcessorForAlliance()" class="member-name-link">getProcessorForAlliance</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isRedAlliance()" class="member-name-link">isRedAlliance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isRedAlliance()" class="member-name-link">isRedAlliance</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.wpilibj2.command.Command</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#triggerAlert(edu.wpi.first.wpilibj.Alert)" class="member-name-link">triggerAlert</a><wbr>(edu.wpi.first.wpilibj.Alert&nbsp;alert)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.wpilibj2.command.Command</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#triggerAlert(edu.wpi.first.wpilibj.Alert)" class="member-name-link">triggerAlert</a><wbr>(edu.wpi.first.wpilibj.Alert&nbsp;alert)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -207,13 +218,13 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="m_redPoses">
 <h3>m_redPoses</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</span>&nbsp;<span class="element-name">m_redPoses</span></div>
+<div class="member-signature"><span class="modifiers">protected static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</span>&nbsp;<span class="element-name">m_redPoses</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="m_bluePoses">
 <h3>m_bluePoses</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</span>&nbsp;<span class="element-name">m_bluePoses</span></div>
+<div class="member-signature"><span class="modifiers">protected static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</span>&nbsp;<span class="element-name">m_bluePoses</span></div>
 </section>
 </li>
 <li>
@@ -329,6 +340,12 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="findClosestReefIndex(edu.wpi.first.math.geometry.Pose2d)">
+<h3>findClosestReefIndex</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">findClosestReefIndex</span><wbr><span class="parameters">(edu.wpi.first.math.geometry.Pose2d&nbsp;pose)</span></div>
+</section>
+</li>
+<li>
 <section class="detail" id="isRedAlliance()">
 <h3>isRedAlliance</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isRedAlliance</span>()</div>
@@ -392,6 +409,20 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd>the closest one's pose</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getOffsetArmAngle(frc.robot.RobotContainer.CoralLevel,edu.wpi.first.math.geometry.Pose2d)">
+<h3>getOffsetArmAngle</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getOffsetArmAngle</span><wbr><span class="parameters">(<a href="RobotContainer.CoralLevel.html" title="enum class in frc.robot">RobotContainer.CoralLevel</a>&nbsp;level,
+ edu.wpi.first.math.geometry.Pose2d&nbsp;robotPose)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getOffsetElevatorHeight(frc.robot.RobotContainer.CoralLevel,edu.wpi.first.math.geometry.Pose2d)">
+<h3>getOffsetElevatorHeight</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getOffsetElevatorHeight</span><wbr><span class="parameters">(<a href="RobotContainer.CoralLevel.html" title="enum class in frc.robot">RobotContainer.CoralLevel</a>&nbsp;level,
+ edu.wpi.first.math.geometry.Pose2d&nbsp;robotPose)</span></div>
 </section>
 </li>
 </ul>
