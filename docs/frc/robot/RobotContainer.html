@@ -107,11 +107,17 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static final edu.wpi.first.wpilibj2.command.button.Trigger</code></div>
-<div class="col-second even-row-color"><code><a href="#BATTERY_BROWN_OUT" class="member-name-link">BATTERY_BROWN_OUT</a></code></div>
+<div class="col-first even-row-color"><code>static edu.wpi.first.wpilibj2.command.button.Trigger</code></div>
+<div class="col-second even-row-color"><code><a href="#ALGAE_HIGH" class="member-name-link">ALGAE_HIGH</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>static <a href="RobotContainer.CoralLevel.html" title="enum class in frc.robot">RobotContainer.CoralLevel</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#coralLevel" class="member-name-link">coralLevel</a></code></div>
+<div class="col-first odd-row-color"><code>static final edu.wpi.first.wpilibj2.command.button.Trigger</code></div>
+<div class="col-second odd-row-color"><code><a href="#BATTERY_BROWN_OUT" class="member-name-link">BATTERY_BROWN_OUT</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static <a href="RobotContainer.CoralLevel.html" title="enum class in frc.robot">RobotContainer.CoralLevel</a></code></div>
+<div class="col-second even-row-color"><code><a href="#coralLevel" class="member-name-link">coralLevel</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>final edu.wpi.first.wpilibj2.command.button.Trigger</code></div>
+<div class="col-second odd-row-color"><code><a href="#IS_CORAL_LOADED" class="member-name-link">IS_CORAL_LOADED</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final edu.wpi.first.wpilibj2.command.button.Trigger</code></div>
 <div class="col-second even-row-color"><code><a href="#IS_DISABLED" class="member-name-link">IS_DISABLED</a></code></div>
@@ -167,6 +173,12 @@ loadScripts(document, 'script');</script>
 <div class="block">this is a wrapper for the command of the same name</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#autonScoreCoral()" class="member-name-link">autonScoreCoral</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#climb()" class="member-name-link">climb</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dealgae()" class="member-name-link">dealgae</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
@@ -180,28 +192,41 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.math.geometry.Pose2d</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRobotPose()" class="member-name-link">getRobotPose</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#periodic()" class="member-name-link">periodic</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#groundIntakeScoreL1()" class="member-name-link">groundIntakeScoreL1</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepCoralIntake()" class="member-name-link">prepCoralIntake</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#periodic()" class="member-name-link">periodic</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepDealgaeHigh()" class="member-name-link">prepDealgaeHigh</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepCoralIntake()" class="member-name-link">prepCoralIntake</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepDealgaeLow()" class="member-name-link">prepDealgaeLow</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepScoreCoral(double,double)" class="member-name-link">prepScoreCoral</a><wbr>(double&nbsp;elevatorHeight,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepCoralIntake(double,double)" class="member-name-link">prepCoralIntake</a><wbr>(double&nbsp;elevatorHeight,
  double&nbsp;armAngle)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepScoreCoral(frc.robot.RobotContainer.CoralLevel)" class="member-name-link">prepScoreCoral</a><wbr>(<a href="RobotContainer.CoralLevel.html" title="enum class in frc.robot">RobotContainer.CoralLevel</a>&nbsp;level)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepScoreCoral(java.util.function.DoubleSupplier,java.util.function.DoubleSupplier)" class="member-name-link">prepScoreCoral</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;elevatorHeight,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepCoralIntakeAuton()" class="member-name-link">prepCoralIntakeAuton</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepDealgaeHigh()" class="member-name-link">prepDealgaeHigh</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepDealgaeLow()" class="member-name-link">prepDealgaeLow</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepScoreCoral(double,double)" class="member-name-link">prepScoreCoral</a><wbr>(double&nbsp;elevatorHeight,
+ double&nbsp;armAngle)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepScoreCoral(frc.robot.RobotContainer.CoralLevel)" class="member-name-link">prepScoreCoral</a><wbr>(<a href="RobotContainer.CoralLevel.html" title="enum class in frc.robot">RobotContainer.CoralLevel</a>&nbsp;level)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepScoreCoral(java.util.function.DoubleSupplier,java.util.function.DoubleSupplier)" class="member-name-link">prepScoreCoral</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;elevatorHeight,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;armAngle)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scoreAlgae()" class="member-name-link">scoreAlgae</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.wpilibj2.command.Command</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scoreCoral()" class="member-name-link">scoreCoral</a>()</code></div>
@@ -278,9 +303,21 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="ALGAE_HIGH">
+<h3>ALGAE_HIGH</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.button.Trigger</span>&nbsp;<span class="element-name">ALGAE_HIGH</span></div>
+</section>
+</li>
+<li>
 <section class="detail" id="IS_NEAR_CORAL_STATION">
 <h3>IS_NEAR_CORAL_STATION</h3>
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.button.Trigger</span>&nbsp;<span class="element-name">IS_NEAR_CORAL_STATION</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="IS_CORAL_LOADED">
+<h3>IS_CORAL_LOADED</h3>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.button.Trigger</span>&nbsp;<span class="element-name">IS_CORAL_LOADED</span></div>
 </section>
 </li>
 </ul>
@@ -354,9 +391,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="prepCoralIntake()">
+<section class="detail" id="prepCoralIntake(double,double)">
 <h3>prepCoralIntake</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">prepCoralIntake</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">prepCoralIntake</span><wbr><span class="parameters">(double&nbsp;elevatorHeight,
+ double&nbsp;armAngle)</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>prep to pickup coral</dd>
@@ -364,9 +402,33 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="prepCoralIntakeAuton()">
+<h3>prepCoralIntakeAuton</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">prepCoralIntakeAuton</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="prepCoralIntake()">
+<h3>prepCoralIntake</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">prepCoralIntake</span>()</div>
+</section>
+</li>
+<li>
 <section class="detail" id="stopIntake()">
 <h3>stopIntake</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">stopIntake</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="groundIntakeScoreL1()">
+<h3>groundIntakeScoreL1</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">groundIntakeScoreL1</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="scoreAlgae()">
+<h3>scoreAlgae</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">scoreAlgae</span>()</div>
 </section>
 </li>
 <li>
@@ -397,6 +459,12 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="autonScoreCoral()">
+<h3>autonScoreCoral</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">autonScoreCoral</span>()</div>
+</section>
+</li>
+<li>
 <section class="detail" id="scoreCoral()">
 <h3>scoreCoral</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">scoreCoral</span>()</div>
@@ -422,6 +490,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="dealgae()">
 <h3>dealgae</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">dealgae</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="climb()">
+<h3>climb</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.wpilibj2.command.Command</span>&nbsp;<span class="element-name">climb</span>()</div>
 </section>
 </li>
 </ul>

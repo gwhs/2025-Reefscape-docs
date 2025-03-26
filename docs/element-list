@@ -8,4 +8,5 @@ frc.robot.subsystems.arm
 frc.robot.subsystems.climb
 frc.robot.subsystems.elevator
 frc.robot.subsystems.endEffector
+frc.robot.subsystems.groundIntake
 frc.robot.subsystems.led

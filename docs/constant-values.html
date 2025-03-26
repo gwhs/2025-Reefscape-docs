@@ -67,6 +67,9 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code id="frc.robot.commands.AlignToPose.PID_MAX">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second even-row-color"><code><a href="frc/robot/commands/AlignToPose.html#PID_MAX">PID_MAX</a></code></div>
 <div class="col-last even-row-color"><code>0.44</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.commands.AlignToPose.PID_ROTATION_MAX">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/commands/AlignToPose.html#PID_ROTATION_MAX">PID_ROTATION_MAX</a></code></div>
+<div class="col-last odd-row-color"><code>0.7</code></div>
 </div>
 </li>
 </ul>
@@ -103,10 +106,10 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color"><code>317.0</code></div>
 <div class="col-first even-row-color"><code id="frc.robot.subsystems.aprilTagCam.AprilTagCamConstants.MULTI_APRILTAG_MAX_DISTANCE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second even-row-color"><code><a href="frc/robot/subsystems/aprilTagCam/AprilTagCamConstants.html#MULTI_APRILTAG_MAX_DISTANCE">MULTI_APRILTAG_MAX_DISTANCE</a></code></div>
-<div class="col-last even-row-color"><code>2.7</code></div>
+<div class="col-last even-row-color"><code>4.3</code></div>
 <div class="col-first odd-row-color"><code id="frc.robot.subsystems.aprilTagCam.AprilTagCamConstants.SINGLE_APRILTAG_MAX_DISTANCE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/aprilTagCam/AprilTagCamConstants.html#SINGLE_APRILTAG_MAX_DISTANCE">SINGLE_APRILTAG_MAX_DISTANCE</a></code></div>
-<div class="col-last odd-row-color"><code>2.4</code></div>
+<div class="col-last odd-row-color"><code>3.0</code></div>
 <div class="col-first even-row-color"><code id="frc.robot.subsystems.aprilTagCam.AprilTagCamConstants.XY_TOLERANCE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second even-row-color"><code><a href="frc/robot/subsystems/aprilTagCam/AprilTagCamConstants.html#XY_TOLERANCE">XY_TOLERANCE</a></code></div>
 <div class="col-last even-row-color"><code>2.0</code></div>
@@ -131,37 +134,43 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color"><code>63.46666666666667</code></div>
 <div class="col-first even-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.ARM_INTAKE_ANGLE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second even-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#ARM_INTAKE_ANGLE">ARM_INTAKE_ANGLE</a></code></div>
-<div class="col-last even-row-color"><code>103.5</code></div>
-<div class="col-first odd-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.ARM_LOWER_BOUND">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#ARM_LOWER_BOUND">ARM_LOWER_BOUND</a></code></div>
-<div class="col-last odd-row-color"><code>90.0</code></div>
-<div class="col-first even-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.ARM_MOTOR_ID">public&nbsp;static&nbsp;final&nbsp;int</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#ARM_MOTOR_ID">ARM_MOTOR_ID</a></code></div>
-<div class="col-last even-row-color"><code>15</code></div>
-<div class="col-first odd-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.ARM_STOW_ANGLE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#ARM_STOW_ANGLE">ARM_STOW_ANGLE</a></code></div>
-<div class="col-last odd-row-color"><code>90.0</code></div>
-<div class="col-first even-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.ARM_UPPER_BOUND">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#ARM_UPPER_BOUND">ARM_UPPER_BOUND</a></code></div>
-<div class="col-last even-row-color"><code>360.0</code></div>
+<div class="col-last even-row-color"><code>-73.477</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.ARM_INTAKE_ANGLE_BACKUP">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#ARM_INTAKE_ANGLE_BACKUP">ARM_INTAKE_ANGLE_BACKUP</a></code></div>
+<div class="col-last odd-row-color"><code>-65.479</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.ARM_LOWER_BOUND">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#ARM_LOWER_BOUND">ARM_LOWER_BOUND</a></code></div>
+<div class="col-last even-row-color"><code>-170.0</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.ARM_MOTOR_ID">public&nbsp;static&nbsp;final&nbsp;int</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#ARM_MOTOR_ID">ARM_MOTOR_ID</a></code></div>
+<div class="col-last odd-row-color"><code>15</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.ARM_STOW_ANGLE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#ARM_STOW_ANGLE">ARM_STOW_ANGLE</a></code></div>
+<div class="col-last even-row-color"><code>-90.0</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.ARM_UPPER_BOUND">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#ARM_UPPER_BOUND">ARM_UPPER_BOUND</a></code></div>
+<div class="col-last odd-row-color"><code>270.0</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.CLIMB_ANGLE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#CLIMB_ANGLE">CLIMB_ANGLE</a></code></div>
+<div class="col-last even-row-color"><code>-170.0</code></div>
 <div class="col-first odd-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.DEALGAE_ANGLE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#DEALGAE_ANGLE">DEALGAE_ANGLE</a></code></div>
-<div class="col-last odd-row-color"><code>350.0</code></div>
+<div class="col-last odd-row-color"><code>170.0</code></div>
 <div class="col-first even-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.L1_PREP_POSITION">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second even-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#L1_PREP_POSITION">L1_PREP_POSITION</a></code></div>
-<div class="col-last even-row-color"><code>313.0</code></div>
+<div class="col-last even-row-color"><code>133.0</code></div>
 <div class="col-first odd-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.L2_PREP_POSITION">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#L2_PREP_POSITION">L2_PREP_POSITION</a></code></div>
-<div class="col-last odd-row-color"><code>315.0</code></div>
+<div class="col-last odd-row-color"><code>135.0</code></div>
 <div class="col-first even-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.L3_PREP_POSITION">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second even-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#L3_PREP_POSITION">L3_PREP_POSITION</a></code></div>
-<div class="col-last even-row-color"><code>305.0</code></div>
+<div class="col-last even-row-color"><code>124.565</code></div>
 <div class="col-first odd-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.L4_PREP_POSITION">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#L4_PREP_POSITION">L4_PREP_POSITION</a></code></div>
-<div class="col-last odd-row-color"><code>295.0</code></div>
+<div class="col-last odd-row-color"><code>120.0</code></div>
 <div class="col-first even-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.MAGNET_OFFSET_DEGREES">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second even-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#MAGNET_OFFSET_DEGREES">MAGNET_OFFSET_DEGREES</a></code></div>
-<div class="col-last even-row-color"><code>-34.96875</code></div>
+<div class="col-last even-row-color"><code>-231.679998</code></div>
 <div class="col-first odd-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.MAX_ACCELERATION">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#MAX_ACCELERATION">MAX_ACCELERATION</a></code></div>
 <div class="col-last odd-row-color"><code>2.0</code></div>
@@ -170,7 +179,10 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color"><code>1.2</code></div>
 <div class="col-first odd-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.PRE_DEALGAE_ANGLE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#PRE_DEALGAE_ANGLE">PRE_DEALGAE_ANGLE</a></code></div>
-<div class="col-last odd-row-color"><code>335.0</code></div>
+<div class="col-last odd-row-color"><code>155.0</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.arm.ArmConstants.PREP_CLIMB_ANGLE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/arm/ArmConstants.html#PREP_CLIMB_ANGLE">PREP_CLIMB_ANGLE</a></code></div>
+<div class="col-last even-row-color"><code>-170.0</code></div>
 </div>
 </li>
 </ul>
@@ -181,24 +193,27 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Constant Field</div>
 <div class="table-header col-last">Value</div>
-<div class="col-first even-row-color"><code id="frc.robot.subsystems.climb.ClimbConstants.CLIMB_GEAR_RATIO">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/climb/ClimbConstants.html#CLIMB_GEAR_RATIO">CLIMB_GEAR_RATIO</a></code></div>
-<div class="col-last even-row-color"><code>64.0</code></div>
-<div class="col-first odd-row-color"><code id="frc.robot.subsystems.climb.ClimbConstants.CLIMB_ID">public&nbsp;static&nbsp;final&nbsp;int</code></div>
-<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/climb/ClimbConstants.html#CLIMB_ID">CLIMB_ID</a></code></div>
-<div class="col-last odd-row-color"><code>56</code></div>
-<div class="col-first even-row-color"><code id="frc.robot.subsystems.climb.ClimbConstants.EXTEND_CLIMB_POSITION">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/climb/ClimbConstants.html#EXTEND_CLIMB_POSITION">EXTEND_CLIMB_POSITION</a></code></div>
-<div class="col-last even-row-color"><code>90.0</code></div>
-<div class="col-first odd-row-color"><code id="frc.robot.subsystems.climb.ClimbConstants.MAX_ACCELERATION">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/climb/ClimbConstants.html#MAX_ACCELERATION">MAX_ACCELERATION</a></code></div>
-<div class="col-last odd-row-color"><code>100.0</code></div>
-<div class="col-first even-row-color"><code id="frc.robot.subsystems.climb.ClimbConstants.MAX_VELOCITY">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/climb/ClimbConstants.html#MAX_VELOCITY">MAX_VELOCITY</a></code></div>
-<div class="col-last even-row-color"><code>100.0</code></div>
-<div class="col-first odd-row-color"><code id="frc.robot.subsystems.climb.ClimbConstants.RETRACT_CLIMB_POSITION">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/climb/ClimbConstants.html#RETRACT_CLIMB_POSITION">RETRACT_CLIMB_POSITION</a></code></div>
-<div class="col-last odd-row-color"><code>0.0</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.climb.ClimbConstants.CLIMB_CLIMB_POSITION">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/climb/ClimbConstants.html#CLIMB_CLIMB_POSITION">CLIMB_CLIMB_POSITION</a></code></div>
+<div class="col-last even-row-color"><code>2.6</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.subsystems.climb.ClimbConstants.CLIMB_GEAR_RATIO">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/climb/ClimbConstants.html#CLIMB_GEAR_RATIO">CLIMB_GEAR_RATIO</a></code></div>
+<div class="col-last odd-row-color"><code>64.0</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.climb.ClimbConstants.CLIMB_ID">public&nbsp;static&nbsp;final&nbsp;int</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/climb/ClimbConstants.html#CLIMB_ID">CLIMB_ID</a></code></div>
+<div class="col-last even-row-color"><code>22</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.subsystems.climb.ClimbConstants.LATCH_CLIMB_POSITION">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/climb/ClimbConstants.html#LATCH_CLIMB_POSITION">LATCH_CLIMB_POSITION</a></code></div>
+<div class="col-last odd-row-color"><code>0.8</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.climb.ClimbConstants.MAX_ACCELERATION">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/climb/ClimbConstants.html#MAX_ACCELERATION">MAX_ACCELERATION</a></code></div>
+<div class="col-last even-row-color"><code>50.0</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.subsystems.climb.ClimbConstants.MAX_VELOCITY">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/climb/ClimbConstants.html#MAX_VELOCITY">MAX_VELOCITY</a></code></div>
+<div class="col-last odd-row-color"><code>20.0</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.climb.ClimbConstants.STOW_CLIMB_POSITION">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/climb/ClimbConstants.html#STOW_CLIMB_POSITION">STOW_CLIMB_POSITION</a></code></div>
+<div class="col-last even-row-color"><code>0.0</code></div>
 </div>
 </li>
 </ul>
@@ -211,7 +226,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Value</div>
 <div class="col-first even-row-color"><code id="frc.robot.subsystems.elevator.ElevatorConstants.BACK_ELEVATOR_MOTOR_ID">public&nbsp;static&nbsp;final&nbsp;int</code></div>
 <div class="col-second even-row-color"><code><a href="frc/robot/subsystems/elevator/ElevatorConstants.html#BACK_ELEVATOR_MOTOR_ID">BACK_ELEVATOR_MOTOR_ID</a></code></div>
-<div class="col-last even-row-color"><code>14</code></div>
+<div class="col-last even-row-color"><code>21</code></div>
 <div class="col-first odd-row-color"><code id="frc.robot.subsystems.elevator.ElevatorConstants.DEALGAE_HIGH_POSITION">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/elevator/ElevatorConstants.html#DEALGAE_HIGH_POSITION">DEALGAE_HIGH_POSITION</a></code></div>
 <div class="col-last odd-row-color"><code>0.4424</code></div>
@@ -223,10 +238,16 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color"><code>0.0</code></div>
 <div class="col-first even-row-color"><code id="frc.robot.subsystems.elevator.ElevatorConstants.FRONT_ELEVATOR_MOTOR_ID">public&nbsp;static&nbsp;final&nbsp;int</code></div>
 <div class="col-second even-row-color"><code><a href="frc/robot/subsystems/elevator/ElevatorConstants.html#FRONT_ELEVATOR_MOTOR_ID">FRONT_ELEVATOR_MOTOR_ID</a></code></div>
-<div class="col-last even-row-color"><code>21</code></div>
+<div class="col-last even-row-color"><code>14</code></div>
 <div class="col-first odd-row-color"><code id="frc.robot.subsystems.elevator.ElevatorConstants.GEAR_RATIO">public&nbsp;static&nbsp;final&nbsp;int</code></div>
 <div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/elevator/ElevatorConstants.html#GEAR_RATIO">GEAR_RATIO</a></code></div>
 <div class="col-last odd-row-color"><code>12</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.elevator.ElevatorConstants.INTAKE_METER">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/elevator/ElevatorConstants.html#INTAKE_METER">INTAKE_METER</a></code></div>
+<div class="col-last even-row-color"><code>0.26</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.subsystems.elevator.ElevatorConstants.INTAKE_METER_BACKUP">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/elevator/ElevatorConstants.html#INTAKE_METER_BACKUP">INTAKE_METER_BACKUP</a></code></div>
+<div class="col-last odd-row-color"><code>0.166</code></div>
 <div class="col-first even-row-color"><code id="frc.robot.subsystems.elevator.ElevatorConstants.L1_PREP_POSITION">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second even-row-color"><code><a href="frc/robot/subsystems/elevator/ElevatorConstants.html#L1_PREP_POSITION">L1_PREP_POSITION</a></code></div>
 <div class="col-last even-row-color"><code>0.0</code></div>
@@ -235,25 +256,22 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color"><code>0.0</code></div>
 <div class="col-first even-row-color"><code id="frc.robot.subsystems.elevator.ElevatorConstants.L3_PREP_POSITION">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second even-row-color"><code><a href="frc/robot/subsystems/elevator/ElevatorConstants.html#L3_PREP_POSITION">L3_PREP_POSITION</a></code></div>
-<div class="col-last even-row-color"><code>0.1986</code></div>
+<div class="col-last even-row-color"><code>0.2</code></div>
 <div class="col-first odd-row-color"><code id="frc.robot.subsystems.elevator.ElevatorConstants.L4_PREP_POSITION">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/elevator/ElevatorConstants.html#L4_PREP_POSITION">L4_PREP_POSITION</a></code></div>
-<div class="col-last odd-row-color"><code>0.7593</code></div>
+<div class="col-last odd-row-color"><code>0.75</code></div>
 <div class="col-first even-row-color"><code id="frc.robot.subsystems.elevator.ElevatorConstants.LIMIT_SWITCH_CHANNEL">public&nbsp;static&nbsp;final&nbsp;int</code></div>
 <div class="col-second even-row-color"><code><a href="frc/robot/subsystems/elevator/ElevatorConstants.html#LIMIT_SWITCH_CHANNEL">LIMIT_SWITCH_CHANNEL</a></code></div>
 <div class="col-last even-row-color"><code>0</code></div>
 <div class="col-first odd-row-color"><code id="frc.robot.subsystems.elevator.ElevatorConstants.MAX_ACCELERATION">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/elevator/ElevatorConstants.html#MAX_ACCELERATION">MAX_ACCELERATION</a></code></div>
-<div class="col-last odd-row-color"><code>800.0</code></div>
+<div class="col-last odd-row-color"><code>400.0</code></div>
 <div class="col-first even-row-color"><code id="frc.robot.subsystems.elevator.ElevatorConstants.MAX_VELOCITY">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second even-row-color"><code><a href="frc/robot/subsystems/elevator/ElevatorConstants.html#MAX_VELOCITY">MAX_VELOCITY</a></code></div>
 <div class="col-last even-row-color"><code>80.0</code></div>
-<div class="col-first odd-row-color"><code id="frc.robot.subsystems.elevator.ElevatorConstants.STOW_METER">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/elevator/ElevatorConstants.html#STOW_METER">STOW_METER</a></code></div>
-<div class="col-last odd-row-color"><code>0.1752</code></div>
-<div class="col-first even-row-color"><code id="frc.robot.subsystems.elevator.ElevatorConstants.TOP_METER">public&nbsp;static&nbsp;final&nbsp;double</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/elevator/ElevatorConstants.html#TOP_METER">TOP_METER</a></code></div>
-<div class="col-last even-row-color"><code>0.7593</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.subsystems.elevator.ElevatorConstants.TOP_METER">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/elevator/ElevatorConstants.html#TOP_METER">TOP_METER</a></code></div>
+<div class="col-last odd-row-color"><code>0.75</code></div>
 </div>
 </li>
 </ul>
@@ -264,9 +282,15 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Constant Field</div>
 <div class="table-header col-last">Value</div>
-<div class="col-first even-row-color"><code id="frc.robot.subsystems.endEffector.EndEffectorConstants.deviceID">public&nbsp;static&nbsp;final&nbsp;int</code></div>
-<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/endEffector/EndEffectorConstants.html#deviceID">deviceID</a></code></div>
-<div class="col-last even-row-color"><code>16</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.endEffector.EndEffectorConstants.CORAL_DETECTOR_ID">public&nbsp;static&nbsp;final&nbsp;int</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/endEffector/EndEffectorConstants.html#CORAL_DETECTOR_ID">CORAL_DETECTOR_ID</a></code></div>
+<div class="col-last even-row-color"><code>2</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.subsystems.endEffector.EndEffectorConstants.deviceID">public&nbsp;static&nbsp;final&nbsp;int</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/endEffector/EndEffectorConstants.html#deviceID">deviceID</a></code></div>
+<div class="col-last odd-row-color"><code>16</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.endEffector.EndEffectorConstants.EXP_DECAY">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/endEffector/EndEffectorConstants.html#EXP_DECAY">EXP_DECAY</a></code></div>
+<div class="col-last even-row-color"><code>0.02</code></div>
 <div class="col-first odd-row-color"><code id="frc.robot.subsystems.endEffector.EndEffectorConstants.GEAR_RATIO">public&nbsp;static&nbsp;final&nbsp;int</code></div>
 <div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/endEffector/EndEffectorConstants.html#GEAR_RATIO">GEAR_RATIO</a></code></div>
 <div class="col-last odd-row-color"><code>3</code></div>
@@ -275,7 +299,77 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color"><code>10.0</code></div>
 <div class="col-first odd-row-color"><code id="frc.robot.subsystems.endEffector.EndEffectorConstants.INTAKE_CORAL_CURRENT">public&nbsp;static&nbsp;final&nbsp;double</code></div>
 <div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/endEffector/EndEffectorConstants.html#INTAKE_CORAL_CURRENT">INTAKE_CORAL_CURRENT</a></code></div>
+<div class="col-last odd-row-color"><code>30.0</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.endEffector.EndEffectorConstants.SDEV_DECAY">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/endEffector/EndEffectorConstants.html#SDEV_DECAY">SDEV_DECAY</a></code></div>
+<div class="col-last even-row-color"><code>0.02</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.subsystems.endEffector.EndEffectorConstants.VOLTAGE_L3">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/endEffector/EndEffectorConstants.html#VOLTAGE_L3">VOLTAGE_L3</a></code></div>
+<div class="col-last odd-row-color"><code>7.0</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.endEffector.EndEffectorConstants.VOLTAGE_L4">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/endEffector/EndEffectorConstants.html#VOLTAGE_L4">VOLTAGE_L4</a></code></div>
+<div class="col-last even-row-color"><code>9.0</code></div>
+</div>
+</li>
+</ul>
+<ul class="block-list">
+<li>
+<div class="caption"><span>frc.robot.subsystems.groundIntake.<a href="frc/robot/subsystems/groundIntake/GroundIntakeConstants.html" title="class in frc.robot.subsystems.groundIntake">GroundIntakeConstants</a></span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Constant Field</div>
+<div class="table-header col-last">Value</div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.groundIntake.GroundIntakeConstants.ALGAE_STOW_ANGLE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/groundIntake/GroundIntakeConstants.html#ALGAE_STOW_ANGLE">ALGAE_STOW_ANGLE</a></code></div>
+<div class="col-last even-row-color"><code>-10.0</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.subsystems.groundIntake.GroundIntakeConstants.CLIMB_ANGLE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/groundIntake/GroundIntakeConstants.html#CLIMB_ANGLE">CLIMB_ANGLE</a></code></div>
+<div class="col-last odd-row-color"><code>-15.0</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.groundIntake.GroundIntakeConstants.CORAL_STOW_ANGLE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/groundIntake/GroundIntakeConstants.html#CORAL_STOW_ANGLE">CORAL_STOW_ANGLE</a></code></div>
+<div class="col-last even-row-color"><code>0.0</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.subsystems.groundIntake.GroundIntakeConstants.ENCODER_OFFSET">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/groundIntake/GroundIntakeConstants.html#ENCODER_OFFSET">ENCODER_OFFSET</a></code></div>
+<div class="col-last odd-row-color"><code>295.0</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.groundIntake.GroundIntakeConstants.GROUND_INTAKE_LOWER_BOUND">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/groundIntake/GroundIntakeConstants.html#GROUND_INTAKE_LOWER_BOUND">GROUND_INTAKE_LOWER_BOUND</a></code></div>
+<div class="col-last even-row-color"><code>-120.0</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.subsystems.groundIntake.GroundIntakeConstants.GROUND_INTAKE_UPPER_BOUND">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/groundIntake/GroundIntakeConstants.html#GROUND_INTAKE_UPPER_BOUND">GROUND_INTAKE_UPPER_BOUND</a></code></div>
 <div class="col-last odd-row-color"><code>10.0</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.groundIntake.GroundIntakeConstants.INTAKE_ALGAE_ANGLE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/groundIntake/GroundIntakeConstants.html#INTAKE_ALGAE_ANGLE">INTAKE_ALGAE_ANGLE</a></code></div>
+<div class="col-last even-row-color"><code>-45.0</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.subsystems.groundIntake.GroundIntakeConstants.INTAKE_CORAL_ANGLE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/groundIntake/GroundIntakeConstants.html#INTAKE_CORAL_ANGLE">INTAKE_CORAL_ANGLE</a></code></div>
+<div class="col-last odd-row-color"><code>-95.0</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.groundIntake.GroundIntakeConstants.MAX_ACCELERATION">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/groundIntake/GroundIntakeConstants.html#MAX_ACCELERATION">MAX_ACCELERATION</a></code></div>
+<div class="col-last even-row-color"><code>2.0</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.subsystems.groundIntake.GroundIntakeConstants.MAX_VELOCITY">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/groundIntake/GroundIntakeConstants.html#MAX_VELOCITY">MAX_VELOCITY</a></code></div>
+<div class="col-last odd-row-color"><code>1.2</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.groundIntake.GroundIntakeConstants.PIVOT_ENCODER_ID">public&nbsp;static&nbsp;final&nbsp;int</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/groundIntake/GroundIntakeConstants.html#PIVOT_ENCODER_ID">PIVOT_ENCODER_ID</a></code></div>
+<div class="col-last even-row-color"><code>2</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.subsystems.groundIntake.GroundIntakeConstants.PIVOT_GEAR_RATIO">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/groundIntake/GroundIntakeConstants.html#PIVOT_GEAR_RATIO">PIVOT_GEAR_RATIO</a></code></div>
+<div class="col-last odd-row-color"><code>60.0</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.groundIntake.GroundIntakeConstants.PIVOT_MOTOR_ID">public&nbsp;static&nbsp;final&nbsp;int</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/groundIntake/GroundIntakeConstants.html#PIVOT_MOTOR_ID">PIVOT_MOTOR_ID</a></code></div>
+<div class="col-last even-row-color"><code>32</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.subsystems.groundIntake.GroundIntakeConstants.SCORE_ALGAE_ANGLE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/groundIntake/GroundIntakeConstants.html#SCORE_ALGAE_ANGLE">SCORE_ALGAE_ANGLE</a></code></div>
+<div class="col-last odd-row-color"><code>-10.0</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.groundIntake.GroundIntakeConstants.SCORE_CORAL_ANGLE">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/groundIntake/GroundIntakeConstants.html#SCORE_CORAL_ANGLE">SCORE_CORAL_ANGLE</a></code></div>
+<div class="col-last even-row-color"><code>-5.0</code></div>
+<div class="col-first odd-row-color"><code id="frc.robot.subsystems.groundIntake.GroundIntakeConstants.SPIN_GEAR_RATIO">public&nbsp;static&nbsp;final&nbsp;double</code></div>
+<div class="col-second odd-row-color"><code><a href="frc/robot/subsystems/groundIntake/GroundIntakeConstants.html#SPIN_GEAR_RATIO">SPIN_GEAR_RATIO</a></code></div>
+<div class="col-last odd-row-color"><code>2.0</code></div>
+<div class="col-first even-row-color"><code id="frc.robot.subsystems.groundIntake.GroundIntakeConstants.SPIN_MOTOR_ID">public&nbsp;static&nbsp;final&nbsp;int</code></div>
+<div class="col-second even-row-color"><code><a href="frc/robot/subsystems/groundIntake/GroundIntakeConstants.html#SPIN_MOTOR_ID">SPIN_MOTOR_ID</a></code></div>
+<div class="col-last even-row-color"><code>31</code></div>
 </div>
 </li>
 </ul>

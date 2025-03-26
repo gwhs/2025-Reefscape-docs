@@ -29,10 +29,6 @@ public class EndEffectorSubsystem extends SubsystemBase {
     // coralTriggered = new Trigger(() -> endEffectorIO.coralLoaded());
   }
 
-  /**
-   * @param voltage the voltage to set to
-   * @return set the motor to the voltage
-   */
   public boolean coralLoaded() {
     return endEffectorIO.coralLoaded();
   }

@@ -111,7 +111,13 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color"><code><a href="#blueCoralStationProcessorSide" class="member-name-link">blueCoralStationProcessorSide</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>protected static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</code></div>
-<div class="col-second even-row-color"><code><a href="#m_bluePoses" class="member-name-link">m_bluePoses</a></code></div>
+<div class="col-second even-row-color"><code><a href="#m_blueAlgaePoses" class="member-name-link">m_blueAlgaePoses</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>protected static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</code></div>
+<div class="col-second odd-row-color"><code><a href="#m_bluePoses" class="member-name-link">m_bluePoses</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>protected static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</code></div>
+<div class="col-second even-row-color"><code><a href="#m_redAlgaePoses" class="member-name-link">m_redAlgaePoses</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>protected static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</code></div>
 <div class="col-second odd-row-color"><code><a href="#m_redPoses" class="member-name-link">m_redPoses</a></code></div>
@@ -150,7 +156,13 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#calculateBlueReefSetPoints()" class="member-name-link">calculateBlueReefSetPoints</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#calculateBlueAlgaeSetPoints()" class="member-name-link">calculateBlueAlgaeSetPoints</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#calculateBlueReefSetPoints()" class="member-name-link">calculateBlueReefSetPoints</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#calculateRedAlgaeSetPoints()" class="member-name-link">calculateRedAlgaeSetPoints</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#calculateRedReefSetPoints()" class="member-name-link">calculateRedReefSetPoints</a>()</code></div>
@@ -179,18 +191,24 @@ loadScripts(document, 'script');</script>
  edu.wpi.first.math.geometry.Pose2d&nbsp;poseB)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.math.geometry.Pose2d</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getNonProcessorForAlliance()" class="member-name-link">getNonProcessorForAlliance</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getOffsetArmAngle(frc.robot.RobotContainer.CoralLevel,edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">getOffsetArmAngle</a><wbr>(<a href="RobotContainer.CoralLevel.html" title="enum class in frc.robot">RobotContainer.CoralLevel</a>&nbsp;level,
- edu.wpi.first.math.geometry.Pose2d&nbsp;robotPose)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getOffsetElevatorHeight(frc.robot.RobotContainer.CoralLevel,edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">getOffsetElevatorHeight</a><wbr>(<a href="RobotContainer.CoralLevel.html" title="enum class in frc.robot">RobotContainer.CoralLevel</a>&nbsp;level,
- edu.wpi.first.math.geometry.Pose2d&nbsp;robotPose)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getNearestAlgaePoint(edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">getNearestAlgaePoint</a><wbr>(edu.wpi.first.math.geometry.Pose2d&nbsp;pose)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.math.geometry.Pose2d</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getProcessorForAlliance()" class="member-name-link">getProcessorForAlliance</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getNonProcessorForAlliance()" class="member-name-link">getNonProcessorForAlliance</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getOffsetArmAngle(frc.robot.RobotContainer.CoralLevel,edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">getOffsetArmAngle</a><wbr>(<a href="RobotContainer.CoralLevel.html" title="enum class in frc.robot">RobotContainer.CoralLevel</a>&nbsp;level,
+ edu.wpi.first.math.geometry.Pose2d&nbsp;robotPose)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getOffsetElevatorHeight(frc.robot.RobotContainer.CoralLevel,edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">getOffsetElevatorHeight</a><wbr>(<a href="RobotContainer.CoralLevel.html" title="enum class in frc.robot">RobotContainer.CoralLevel</a>&nbsp;level,
+ edu.wpi.first.math.geometry.Pose2d&nbsp;robotPose)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static edu.wpi.first.math.geometry.Pose2d</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getProcessorForAlliance()" class="member-name-link">getProcessorForAlliance</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isHighAlgae(edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">isHighAlgae</a><wbr>(edu.wpi.first.math.geometry.Pose2d&nbsp;pose)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isRedAlliance()" class="member-name-link">isRedAlliance</a>()</code></div>
@@ -225,6 +243,18 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="m_bluePoses">
 <h3>m_bluePoses</h3>
 <div class="member-signature"><span class="modifiers">protected static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</span>&nbsp;<span class="element-name">m_bluePoses</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="m_redAlgaePoses">
+<h3>m_redAlgaePoses</h3>
+<div class="member-signature"><span class="modifiers">protected static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</span>&nbsp;<span class="element-name">m_redAlgaePoses</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="m_blueAlgaePoses">
+<h3>m_blueAlgaePoses</h3>
+<div class="member-signature"><span class="modifiers">protected static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</span>&nbsp;<span class="element-name">m_blueAlgaePoses</span></div>
 </section>
 </li>
 <li>
@@ -291,6 +321,30 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd>returns calculated setpoints</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="calculateBlueAlgaeSetPoints()">
+<h3>calculateBlueAlgaeSetPoints</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</span>&nbsp;<span class="element-name">calculateBlueAlgaeSetPoints</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="calculateRedAlgaeSetPoints()">
+<h3>calculateRedAlgaeSetPoints</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;edu.wpi.first.math.geometry.Pose2d&gt;</span>&nbsp;<span class="element-name">calculateRedAlgaeSetPoints</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getNearestAlgaePoint(edu.wpi.first.math.geometry.Pose2d)">
+<h3>getNearestAlgaePoint</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">edu.wpi.first.math.geometry.Pose2d</span>&nbsp;<span class="element-name">getNearestAlgaePoint</span><wbr><span class="parameters">(edu.wpi.first.math.geometry.Pose2d&nbsp;pose)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="isHighAlgae(edu.wpi.first.math.geometry.Pose2d)">
+<h3>isHighAlgae</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isHighAlgae</span><wbr><span class="parameters">(edu.wpi.first.math.geometry.Pose2d&nbsp;pose)</span></div>
 </section>
 </li>
 <li>
