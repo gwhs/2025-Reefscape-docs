@@ -213,6 +213,7 @@ public class RobotContainer {
     PathfindingCommand.warmupCommand().schedule();
 
     SmartDashboard.putData("Command Scheduler", CommandScheduler.getInstance());
+    SmartDashboard.putData("Unprep Climb", unPrepClimbCommand());
 
     // Calculate reef setpoints at startup
     EagleUtil.calculateBlueReefSetPoints();
@@ -390,21 +391,21 @@ public class RobotContainer {
                     () -> driveCommand.setTargetMode(DriveCommand.TargetMode.REEF))
                 .withName("Ground Intake normal"));
 
-    m_operatorController
-        .x()
-        .whileTrue(
-            Commands.startEnd(
-                    () -> driveCommand.setTargetMode(DriveCommand.TargetMode.NORMAL),
-                    () -> driveCommand.setTargetMode(DriveCommand.TargetMode.REEF))
-                .withName("Algae Normal"));
+    // m_operatorController
+    //     .x()
+    //     .whileTrue(
+    //         Commands.startEnd(
+    //                 () -> driveCommand.setTargetMode(DriveCommand.TargetMode.NORMAL),
+    //                 () -> driveCommand.setTargetMode(DriveCommand.TargetMode.REEF))
+    //             .withName("Algae Normal"));
 
-    IS_L1
-        .and(IS_REEF_MODE)
-        .onTrue(
-            Commands.runOnce(
-                () -> {
-                  driveCommand.setReefMode(DriveCommand.ReefPositions.BACK_REEF);
-                }));
+    // IS_L1
+    //     .and(IS_REEF_MODE)
+    //     .onTrue(
+    //         Commands.runOnce(
+    //             () -> {
+    //               driveCommand.setReefMode(DriveCommand.ReefPositions.FRONT_REEF);
+    //             }));
 
     IS_L2
         .or(IS_L3)
@@ -446,24 +447,23 @@ public class RobotContainer {
 
     m_driverController
         .a()
-        .whileTrue(alignToPose(() -> EagleUtil.getCachedReefPose(drivetrain.getState().Pose)));
+        .whileTrue(alignToPose(() -> EagleUtil.getClosestLeftReef(drivetrain.getPose(0.25))));
 
     m_driverController
         .b()
-        .whileTrue(alignToPose(() -> EagleUtil.closestReefSetPoint(drivetrain.getPose(), 1)));
+        .whileTrue(alignToPose(() -> EagleUtil.getClosestRightReef(drivetrain.getPose(0.25))));
 
     m_operatorController.start().onTrue(elevator.homingCommand());
 
     m_operatorController
         .x()
-        .whileTrue(groundIntake.setAngleAndVoltage(GroundIntakeConstants.INTAKE_CORAL_ANGLE, -6))
-        .onFalse(
-            groundIntake.setAngleAndVoltage(GroundIntakeConstants.CORAL_STOW_ANGLE, -3)); // TODO
+        .whileTrue(
+            alignToPose(() -> EagleUtil.getClosestCoralStation(this.getRobotPose()))); // TODO
 
     m_operatorController.y().onTrue(Commands.runOnce(() -> coralLevel = CoralLevel.L4));
     m_operatorController.b().onTrue(Commands.runOnce(() -> coralLevel = CoralLevel.L3));
     m_operatorController.a().onTrue(Commands.runOnce(() -> coralLevel = CoralLevel.L2));
-    m_operatorController.x().onTrue(Commands.runOnce(() -> coralLevel = CoralLevel.L1));
+    // m_operatorController.x().onTrue(Commands.runOnce(() -> coralLevel = CoralLevel.L1));
 
     // m_operatorController.y().whileTrue(arm.sysIdQuasistatic(Direction.kForward));
     // m_operatorController.b().whileTrue(arm.sysIdQuasistatic(Direction.kReverse));
@@ -475,8 +475,8 @@ public class RobotContainer {
     m_operatorController.povUp().onTrue(elevator.increaseHeight(0.02));
     m_operatorController.povDown().onTrue(elevator.decreaseHeight(0.02));
 
-    m_operatorController.leftBumper().onTrue(groundIntake.decreaseAngle(3));
-    m_operatorController.rightBumper().onTrue(groundIntake.increaseAngle(3));
+    // m_operatorController.leftBumper().onTrue(groundIntake.decreaseAngle(3));
+    // m_operatorController.rightBumper().onTrue(groundIntake.increaseAngle(3));
 
     m_operatorController.leftTrigger().and(m_operatorController.rightTrigger()).onTrue(climb());
   }
@@ -553,6 +553,7 @@ public class RobotContainer {
     autoChooser.addOption(
         "Wheel_Radius_Chracterizaton",
         WheelRadiusCharacterization.wheelRadiusCharacterization(drivetrain));
+    autoChooser.addOption("Do Notion", Commands.none());
 
     SmartDashboard.putData("autonomous", autoChooser);
   }
@@ -587,12 +588,11 @@ public class RobotContainer {
   }
 
   public Command prepCoralIntakeAuton() {
-    return Commands.sequence(
-        endEffector.intake(),
-        elevator.setHeight(ElevatorConstants.INTAKE_METER).withTimeout(0.5),
-        arm.setAngle(ArmConstants.ARM_INTAKE_ANGLE)
-            .withTimeout(1)
-            .withName("Prepare Coral Intake Auton"));
+    return Commands.parallel(
+            endEffector.intake(),
+            elevator.setHeight(ElevatorConstants.INTAKE_METER_AUTON).withTimeout(0.5),
+            arm.setAngle(ArmConstants.ARM_INTAKE_ANGLE).withTimeout(1))
+        .withName("Prepare Coral Intake Auton");
   }
 
   public Command prepCoralIntake() {
@@ -664,12 +664,7 @@ public class RobotContainer {
 
   public Command autonScoreCoral() {
     return Commands.sequence(
-            endEffector.shoot(EndEffectorConstants.VOLTAGE_L4),
-            Commands.waitSeconds(0.05),
-            arm.setAngle(ArmConstants.ARM_STOW_ANGLE).withTimeout(0.0),
-            elevator.setHeight(ElevatorConstants.STOW_METER).withTimeout(0.0),
-            endEffector.stopMotor())
-        .withTimeout(0.5);
+        endEffector.shoot(EndEffectorConstants.VOLTAGE_L4), Commands.waitSeconds(0.05));
   }
 
   /**
@@ -683,6 +678,7 @@ public class RobotContainer {
                     endEffector.shoot(EndEffectorConstants.VOLTAGE_L3),
                     IS_L4),
                 Commands.waitSeconds(0.05),
+                drivetrain.driveBackward(1).withTimeout(0.2).onlyIf(IS_L2),
                 arm.setAngle(ArmConstants.ARM_STOW_ANGLE).withTimeout(0.0),
                 elevator.setHeight(ElevatorConstants.STOW_METER).withTimeout(0.0),
                 endEffector.stopMotor())
@@ -697,9 +693,14 @@ public class RobotContainer {
                 Commands.waitSeconds(0.05),
                 endEffector.stopMotor(),
                 alignToPose(() -> EagleUtil.getNearestAlgaePoint(drivetrain.getState().Pose))
-                    .withTimeout(0.8),
+                    .withTimeout(0.6)
+                    .alongWith(arm.setAngle(90).withTimeout(0.5)),
+                Commands.either(
+                    elevator.setHeight(ElevatorConstants.DEALGAE_HIGH_POSITION),
+                    elevator.setHeight(ElevatorConstants.DEALGAE_LOW_POSITION),
+                    ALGAE_HIGH),
                 Commands.either(prepDealgaeHigh(), prepDealgaeLow(), ALGAE_HIGH)
-                    .withTimeout(1)
+                    .withTimeout(.6)
                     .deadlineFor(
                         alignToPose(
                             () -> EagleUtil.getNearestAlgaePoint(drivetrain.getState().Pose))),
@@ -741,18 +742,20 @@ public class RobotContainer {
         .withName("Dealgae");
   }
 
-  public Command climb() {
-    Trigger unprepclimbTrigger = m_operatorController.leftTrigger().negate();
-    Trigger climbTrigger =
-        m_operatorController.rightTrigger().and(m_operatorController.leftTrigger());
+  public Command unPrepClimbCommand() {
+    return Commands.sequence(
+            arm.setAngle(ArmConstants.CLIMB_ANGLE).withTimeout(1),
+            Commands.runOnce(() -> driveCommand.setTargetMode(DriveCommand.TargetMode.REEF)),
+            climb.stow().withTimeout(5),
+            elevator.setHeight(ElevatorConstants.STOW_METER).withTimeout(1),
+            arm.setAngle(ArmConstants.ARM_STOW_ANGLE))
+        .withInterruptBehavior(InterruptionBehavior.kCancelIncoming)
+        .withName("unPrepClimb");
+  }
 
-    Command unPrepClimbCommand =
-        Commands.sequence(
-            Commands.parallel(
-                elevator.setHeight(0).withTimeout(1),
-                arm.setAngle(90).withTimeout(1),
-                Commands.runOnce(() -> driveCommand.setTargetMode(DriveCommand.TargetMode.REEF)),
-                climb.stow()));
+  public Command climb() {
+    Trigger climbTrigger =
+        m_operatorController.rightBumper().and(m_operatorController.leftBumper());
 
     Command climbCommand =
         Commands.parallel(

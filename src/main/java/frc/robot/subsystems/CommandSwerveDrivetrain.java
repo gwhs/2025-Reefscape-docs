@@ -21,6 +21,7 @@ import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.math.controller.ProfiledPIDController;
 import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.math.geometry.Rotation2d;
+import edu.wpi.first.math.geometry.Transform2d;
 import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.math.kinematics.ChassisSpeeds;
 import edu.wpi.first.math.numbers.N1;
@@ -60,7 +61,7 @@ public class CommandSwerveDrivetrain extends TunerSwerveDrivetrain implements Su
             }
           });
 
-  public Constraints constraints = new TrapezoidProfile.Constraints(3, 1);
+  public Constraints constraints = new TrapezoidProfile.Constraints(3, 2);
   public ProfiledPIDController PID_X = new ProfiledPIDController(3.0, 0, 0, constraints);
   public ProfiledPIDController PID_Y = new ProfiledPIDController(3.0, 0, 0, constraints);
 
@@ -162,8 +163,14 @@ public class CommandSwerveDrivetrain extends TunerSwerveDrivetrain implements Su
    * @param targetPose the pose to go to
    */
   public void goToPoseWithPID(Pose2d targetPose) {
-    PID_X.reset(getPose().getX());
-    PID_Y.reset(getPose().getY());
+    ChassisSpeeds currentSpeed =
+        ChassisSpeeds.fromRobotRelativeSpeeds(getState().Speeds, getRotation());
+
+    double predicted_X = (targetPose.getX() - getPose().getX()) * 0.4 + getPose().getX();
+    double predicted_Y = (targetPose.getY() - getPose().getY()) * 0.4 + getPose().getY();
+
+    PID_X.reset(predicted_X, currentSpeed.vxMetersPerSecond * 0.4);
+    PID_Y.reset(predicted_Y, currentSpeed.vyMetersPerSecond * 0.4);
     PID_X.setGoal(targetPose.getX());
     PID_Y.setGoal(targetPose.getY());
     PID_Rotation.setSetpoint(targetPose.getRotation().getDegrees());
@@ -279,21 +286,28 @@ public class CommandSwerveDrivetrain extends TunerSwerveDrivetrain implements Su
     DogLog.log("Swerve/current X setpoint", PID_X.getSetpoint().position);
     DogLog.log("Swerve/current Y setpoint", PID_Y.getSetpoint().position);
 
+    DogLog.log(
+        "Swerve/current setpoint",
+        new Pose2d(
+            PID_X.getSetpoint().position,
+            PID_Y.getSetpoint().position,
+            Rotation2d.fromDegrees(PID_Rotation.getSetpoint())));
+
     DogLog.log("Swerve/Front Left Drive Motor Connected", driveMotors[0].isConnected());
-    DogLog.log("Swerve/Front Left Steer Motor Connected", driveMotors[0].isConnected());
-    DogLog.log("Swerve/Front Left CANcoder Connected", driveMotors[0].isConnected());
+    DogLog.log("Swerve/Front Left Steer Motor Connected", steerMotors[0].isConnected());
+    DogLog.log("Swerve/Front Left CANcoder Connected", encoders[0].isConnected());
 
     DogLog.log("Swerve/Front Right Drive Motor Connected", driveMotors[1].isConnected());
-    DogLog.log("Swerve/Front Right Steer Motor Connected", driveMotors[1].isConnected());
-    DogLog.log("Swerve/Front Right CANcoder Connected", driveMotors[1].isConnected());
+    DogLog.log("Swerve/Front Right Steer Motor Connected", steerMotors[1].isConnected());
+    DogLog.log("Swerve/Front Right CANcoder Connected", encoders[1].isConnected());
 
     DogLog.log("Swerve/Back Left Drive Motor Connected", driveMotors[2].isConnected());
-    DogLog.log("Swerve/Back Left Steer Motor Connected", driveMotors[2].isConnected());
-    DogLog.log("Swerve/Back Left CANcoder Connected", driveMotors[2].isConnected());
+    DogLog.log("Swerve/Back Left Steer Motor Connected", steerMotors[2].isConnected());
+    DogLog.log("Swerve/Back Left CANcoder Connected", encoders[2].isConnected());
 
     DogLog.log("Swerve/Back Right Drive Motor Connected", driveMotors[3].isConnected());
-    DogLog.log("Swerve/Back Right Steer Motor Connected", driveMotors[3].isConnected());
-    DogLog.log("Swerve/Back Right CANcoder Connected", driveMotors[3].isConnected());
+    DogLog.log("Swerve/Back Right Steer Motor Connected", steerMotors[3].isConnected());
+    DogLog.log("Swerve/Back Right CANcoder Connected", encoders[3].isConnected());
 
     DogLog.log("Swerve/Pigeon Connected", gyro.isConnected());
   }
@@ -333,6 +347,24 @@ public class CommandSwerveDrivetrain extends TunerSwerveDrivetrain implements Su
    */
   public Pose2d getPose() {
     return getState().Pose;
+  }
+
+  public Pose2d getPose(double timeSeconds) {
+    Pose2d currPose = this.getPose();
+    Rotation2d currRotation = currPose.getRotation();
+    ChassisSpeeds speeds = getState().Speeds;
+    double velocityX = speeds.vxMetersPerSecond;
+    double velocityY = speeds.vyMetersPerSecond;
+
+    double transformX = timeSeconds * velocityX;
+    double transformY = timeSeconds * velocityY;
+    Rotation2d transformRotation = new Rotation2d(timeSeconds * speeds.omegaRadiansPerSecond);
+    Transform2d transformPose = new Transform2d(transformX, transformY, transformRotation);
+    Pose2d predictedPose = currPose.plus(transformPose);
+
+    DogLog.log("Predicted Pose", predictedPose);
+
+    return predictedPose;
   }
 
   /**
