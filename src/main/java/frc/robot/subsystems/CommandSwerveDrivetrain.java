@@ -94,7 +94,7 @@ public class CommandSwerveDrivetrain extends TunerSwerveDrivetrain implements Su
 
   /** Swerve request to apply during robot-centric path following */
   private final SwerveRequest.ApplyRobotSpeeds m_pathApplyRobotSpeeds =
-      new SwerveRequest.ApplyRobotSpeeds();
+      new SwerveRequest.ApplyRobotSpeeds().withDriveRequestType(DriveRequestType.Velocity);
 
   private final SwerveRequest.RobotCentric robotCentricDrive =
       new SwerveRequest.RobotCentric().withDriveRequestType(DriveRequestType.OpenLoopVoltage);
@@ -277,11 +277,9 @@ public class CommandSwerveDrivetrain extends TunerSwerveDrivetrain implements Su
                         : kBlueAlliancePerspectiveRotation);
                 m_hasAppliedOperatorPerspective = true;
               });
-
-      DogLog.log(
-          "Command Swerve DriveTrain/is Aligning to pose", IS_ALIGNING_TO_POSE.getAsBoolean());
-      DogLog.log("Command Swerve DriveTrain/is at target pose", IS_AT_TARGET_POSE.getAsBoolean());
     }
+    DogLog.log("Command Swerve DriveTrain/is Aligning to pose", IS_ALIGNING_TO_POSE.getAsBoolean());
+    DogLog.log("Command Swerve DriveTrain/is at target pose", IS_AT_TARGET_POSE.getAsBoolean());
 
     DogLog.log("Swerve/current X setpoint", PID_X.getSetpoint().position);
     DogLog.log("Swerve/current Y setpoint", PID_Y.getSetpoint().position);
