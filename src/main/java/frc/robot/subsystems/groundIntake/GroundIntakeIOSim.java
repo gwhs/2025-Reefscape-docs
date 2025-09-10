@@ -11,6 +11,11 @@ import edu.wpi.first.wpilibj.simulation.SingleJointedArmSim;
 
 public class GroundIntakeIOSim implements GroundIntakeIO {
 
+  /**
+   * this class does what {@link frc.robot.subsystems.groundIntake.GroundIntakeIOReal} does but in sim, to see what the methods do check that javadoc
+   */
+
+
   private SingleJointedArmSim pivotMotorSim =
       new SingleJointedArmSim(
           DCMotor.getFalcon500Foc(1),

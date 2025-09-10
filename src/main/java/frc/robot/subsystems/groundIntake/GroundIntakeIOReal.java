@@ -19,6 +19,10 @@ import edu.wpi.first.wpilibj.Alert.AlertType;
 import edu.wpi.first.wpilibj.DutyCycleEncoder;
 
 public class GroundIntakeIOReal implements GroundIntakeIO {
+  
+  /**
+   * this class actually defines the methods used when the wrappers in {@link frc.robot.subsystems.groundIntake.GroundIntakeSubsystem} call them 
+   */
 
   private final TalonFX spinMotor = new TalonFX(GroundIntakeConstants.SPIN_MOTOR_ID, "rio");
   private final TalonFX pivotMotor = new TalonFX(GroundIntakeConstants.PIVOT_MOTOR_ID, "rio");
@@ -47,6 +51,10 @@ public class GroundIntakeIOReal implements GroundIntakeIO {
 
   private TorqueCurrentFOC currentControl = new TorqueCurrentFOC(0);
 
+ 
+  /**
+   * class constructor, creates lots of configs
+   */
   public GroundIntakeIOReal() {
     // configuration for the pivot motor
 
@@ -128,26 +136,44 @@ public class GroundIntakeIOReal implements GroundIntakeIO {
         groundIntakePIDGoal);
   }
 
+  /**
+   * set the voltage (speed) for the spin motor to spin at.
+   * @param voltage the voltage to set it
+   */
   @Override
   public void setSpinMotorVoltage(double voltage) {
     spinMotor.setVoltage(voltage);
   }
 
+
+  /**
+   * set the voltage of the pivot motor.
+   * @param voltage what voltage to set it to.
+   */
   @Override
   public void setPivotMotorVoltage(double voltage) {
     pivotMotor.setVoltage(voltage);
   }
 
+  /**
+   * get the angle of the pivot motor.
+   */
   @Override
   public double getPivotAngle() {
     return (Units.rotationsToDegrees(pivotEncoder.get()) - GroundIntakeConstants.ENCODER_OFFSET);
   }
 
+  /**
+   * set the ground intake to a specific angle
+   */
   @Override
   public void setAngle(double angle) {
     pivotMotor.setControl(m_request.withPosition(Units.degreesToRotations(angle)));
   }
 
+  /**
+   * update all of the logged things
+   */
   @Override
   public void update() {
     BaseStatusSignal.refreshAll(
@@ -177,6 +203,9 @@ public class GroundIntakeIOReal implements GroundIntakeIO {
     pivotEncoderConnected.set(!pivotEncoder.isConnected());
   }
 
+  /**
+   * reset the pivot encoder angle to base angle
+   */
   @Override
   public void resetPivotEncoder() {
     if (pivotEncoder.isConnected()) {
@@ -186,6 +215,9 @@ public class GroundIntakeIOReal implements GroundIntakeIO {
     }
   }
 
+  /**
+   * unknown what is does, proceed with caution  
+   */
   @Override
   public void runAmp(double amp, double dutyCycle) {
     pivotMotor.setControl(currentControl.withOutput(amp).withMaxAbsDutyCycle(dutyCycle));

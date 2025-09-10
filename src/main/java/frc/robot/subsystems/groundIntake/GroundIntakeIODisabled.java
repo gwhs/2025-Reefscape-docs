@@ -1,6 +1,12 @@
 package frc.robot.subsystems.groundIntake;
 
+/**
+ * this class solely exists to test things, the methods don't do anything. 
+ */
+
+
 public class GroundIntakeIODisabled implements GroundIntakeIO {
+
 
   @Override
   public void setAngle(double angle) {}

@@ -8,6 +8,11 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class GroundIntakeSubsystem extends SubsystemBase {
 
+  /**
+   * this is a wrapper class for {@link frc.robot.subsystems.groundIntake.GroundIntakeIOReal} or {@link frc.robot.subsystems.groundIntake.GroundIntakeIOSim} depending on if the robot is simmed or not
+   */
+
+
   private final GroundIntakeIO groundintakeIO;
 
   public GroundIntakeSubsystem() {

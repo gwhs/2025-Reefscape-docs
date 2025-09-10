@@ -2,6 +2,11 @@ package frc.robot.subsystems.groundIntake;
 
 public class GroundIntakeConstants {
 
+ /**
+  * this class defines the constant values used by this package.
+  */
+
+
   public static final int SPIN_MOTOR_ID = 31;
   public static final int PIVOT_MOTOR_ID = 32;
   public static final int PIVOT_ENCODER_ID = 2;
